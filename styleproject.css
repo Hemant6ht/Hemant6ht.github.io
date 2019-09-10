@@ -2,19 +2,26 @@
 body{
 	margin: 0px;
 }
+ .navbar{
+ 	
+ 	position: fixed;
+ 	top:0;
+ 	width:100%;
+
+ }
 .mainnav{
 	display: flex;
 	
 	margin: 0px;
-	background-color: green;
+	
 	list-style: none;
-	font-size: 1.8em;
+	font-size: 1.4em;
 
 
 }
 @media only screen and (max-width:550px){
 	.mainnav{
-		font-size:1.4em;
+		font-size:1.0em;
 
 	}
 }
@@ -22,7 +29,7 @@ body{
 li{
 	
 	
-	padding: 10px;
+	padding: 20px;
 	margin 5px
 }
 a{
@@ -35,31 +42,43 @@ a{
 
 
 .cover{
-	background-color: lightblue;
+	
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height:70vh;
-	font-size: 2em;
-	margin-bottom: 2vh;
+
+}
+.coverimg{
+	width:30rem;
 }
 .gridcontainer{
   display:grid;
-  grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+  grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
   grid-gap: 20px;
   background-color: pink;
   margin-bottom: 20px;
 
+
 }
 .child > img {
 	width:100%;
+	height: auto;
 
 }
 .child{
-	background-color:black;
-	padding: 30px
+	background-color:#444;
+	padding: 50px;
+	margin: 20px;
+ transition: all 0.3s linear;
+  border:1px solid #bbb;
 
+
+}
+.child:hover{
+	transform: rotate(-7deg);
+	
+	 box-shadow:rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
 
 }
 .footer{
@@ -71,3 +90,20 @@ a{
 	font-size: 2em;
 	color: black;
 }
+
+
+
+
+
+/*
+ colors defintions
+*/
+.blue {
+    background: #7abcff; /* Old browsers */
+    background: -moz-linear-gradient(top, #7abcff 0%, #60abf8 44%, #4096ee 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7abcff), color-stop(44%,#60abf8), color-stop(100%,#4096ee)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* IE10+ */
+    background: linear-gradient(top, #7abcff 0%,#60abf8 44%,#4096ee 100%); /* W3C */
+}	
